@@ -1,4 +1,4 @@
-import faunadb, { query as q } from 'faunadb'
+import { query as q } from 'faunadb';
 
 import NextAuth from "next-auth"
 import GithubProvider from "next-auth/providers/github"

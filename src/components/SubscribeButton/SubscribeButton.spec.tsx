@@ -18,7 +18,7 @@ jest.mock('next/router'/* , () => {
 describe('SubscribeButton component', () => {
   it('renders correctly', () => {
     const useSessionMocked = mocked(useSession);
-    useSessionMocked.mockReturnValueOnce({ data: null, status: "loading" });
+    (useSessionMocked as any).mockReturnValueOnce({ data: null, status: "loading" });
 
     render(<SubscribeButton />)
     expect(screen.getByText('Subscribe now')).toBeInTheDocument()
@@ -26,7 +26,7 @@ describe('SubscribeButton component', () => {
 
   it('redirects user to sign in when not authenticated', () => {
     const useSessionMocked = mocked(useSession);
-    useSessionMocked.mockReturnValueOnce({ data: null, status: "loading" });
+    (useSessionMocked as any).mockReturnValueOnce({ data: null, status: "loading" });
 
     const signInMocked = mocked(signIn);
 
@@ -54,7 +54,8 @@ describe('SubscribeButton component', () => {
           activeSubscription: 'fake-active-subscription',
           expires: 'fake-expires'
         },
-        status: "authenticated"
+        status: "authenticated",
+        update: null
       });
 
     useRouterMocked.mockReturnValueOnce({
