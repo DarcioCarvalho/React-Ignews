@@ -22,7 +22,7 @@ Como o sistema está em modo TESTE, utilize o cartão de teste de número `4242 
   <img alt="IGNEWS - Home" src=".github/home-ignews.png" />
 </p>
 
-[ACESSE A APLICAÇÃO](https://ignews-db67my9yg-darciocarvalho.vercel.app/)
+[ACESSE A APLICAÇÃO](https://ignews-knuimv104-darciocarvalho.vercel.app/)
 
 ## ✨ Tecnologia
 
